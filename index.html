@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" author="Jacob Shultz" />
+    <meta name="description" content="Portfolio Website" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+
+    <title>Boot</title>
+    <link rel="stylesheet" href="styling/main.css" type="text/css" />
+    <link rel="stylesheet" href="styling/animations.css" type="text/css" />
+    <link rel="stylesheet" href="styling/popup.css" type="text/css" />
+    <script src="scripts/animations.js" defer></script>
+    <script src="scripts/sounds.js" defer></script>
+    <script src="scripts/boot.js" defer></script>
+  </head>
+
+  <body>
+    <div class="crt-screen-glow"></div>
+    <div class="crt-screen-scanlines"></div>
+
+    <div class="center-area">
+      <div id="msg-start" class="popup-box">
+        <div id="txt-start-msg" class="popup-text">
+          Epilepsy - Caution: flickering light. Press any key or click anywhere
+          to boot.
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-center-area">
+      <div id="btn-skip" class="popup-box">
+        <div id="txt-skip" class="popup-text">Skip</div>
+        <br />
+      </div>
+    </div>
+    <div class="main-text" id="boot-text"></div>
+  </body>
+</html>

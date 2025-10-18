@@ -1,0 +1,65 @@
+.popup-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  position: fixed;
+  border-radius: 5rem;
+  z-index: 9990;
+  cursor: pointer;
+
+  background-color: rgba(20, 20, 20, 1);
+}
+
+.popup-text {
+  text-align: center;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: none;
+}
+
+.center-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+}
+
+.bottom-center-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100vw;
+  height: 98%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+}
+
+#msg-start {
+  margin-top: 0%;
+  margin-bottom: 15%;
+  width: 60%;
+}
+
+#txt-start-msg {
+  font-size: xx-large;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#btn-skip {
+  width: 4%;
+}
+
+#txt-skip {
+  font-size: medium;
+  margin-top: 1rem;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" author="Jacob Shultz" />
+    <meta name="description" content="My Projects" />
+
+    <title>Projects</title>
+    <link rel="stylesheet" href="../styling/main.css" type="text/css" />
+    <link rel="stylesheet" href="../styling/animations.css" type="text/css" />
+    <script src="../scripts/animations.js" defer></script>
+    <script src="../scripts/sounds.js" defer></script>
+    <script src="../scripts/general-page-load.js" defer></script>
+  </head>
+
+  <body>
+    <div class="crt-screen-glow"></div>
+    <div class="crt-screen-scanlines"></div>
+
+    <div class="main-text">
+      <div class="links" style="justify-content: center">
+        <a href="bio.html">home</a>
+        <a href="../files/jacobshultz.pdf" target="_blank">resume</a>
+        <a href="mailto:jshultz.biz@outlook.com">email</a>
+        <a href="https://github.com/jacobshultz" target="_blank">github</a>
+        <a
+          href="https://www.linkedin.com/in/jacob-shultz-profile/"
+          target="_blank"
+          >linkedin</a
+        >
+      </div>
+
+      <h1>My Best Work</h1>
+
+      <!-- DEVILBISS SECTION -->
+      <div class="margined">
+        <h2>Unified Sound Tester</h2>
+        <details>
+          <summary style="font-weight: bolder">
+            for Drive DeVilbiss Healthcare - May 2025 to August 2025
+          </summary>
+          <p>
+            DeVilbiss Healthcare is a dynamic and innovative leader in
+            respiratory medical equipment with over 135 years of expertise. Its
+            headquarters and manufacturing campus in Somerset hums with energy
+            as dozens of teams across multiple disiplines design and build
+            world-class oxygen concentrators, nebulizers, suction units, and
+            sleep-therapy solutions that improve lives across more than 100
+            countries. Backed by the resources of Drive, the Somerset facility
+            continues to expand production and help their customers breathe
+            easier!
+          </p>
+        </details>
+
+        <img
+          src="../imgs/dvb.jpg"
+          alt="Drive DeVilbiss Somerset manufacturing plant."
+          style="width: 25rem"
+        />
+
+        <details>
+          <summary>
+            The Unified Sound Tester is an application used daily on the
+            production line to verify whether each unit meets acceptable volume
+            standards during operation. Prior to this project, the sound-testing
+            process relied on three separate applications. The goal was to
+            consolidate them into a single, streamlined tool to increase
+            production efficiency, extend long-term maintainability, and improve
+            scalability.
+          </summary>
+
+          <!-- Context / Problem -->
+          <p>
+            At DeVilbiss, sound testing is a regular part of the production line
+            assembly process. Each unit is checked to make sure its noise levels
+            stay within set limits. The first program, built in VB6, handled
+            just three oxygen concentrator models. As production expanded and
+            new models came out, it didn't make sense to support the original
+            sound tester application written in ancient VB6, so fancy new .NET
+            apps were made to accommodate each of the new models. This left the
+            software team with several programs that all do almost exactly the
+            same thing.
+          </p>
+          <p>
+            This solution, while working temporarily, was not without it's
+            issues. To begin, assemblers on the factory floor were confused with
+            multiple apps. To them, a sound test is just a sound test. Why do
+            they need to open a new program depending on the unit? Additionally,
+            the SwEs at DeVilbiss knew that as production expanded this
+            multi-app approach would become unmaintainable. If ten new models
+            are added to production, will ten new apps be created? The
+            assemblers definitely won't like that! Not to mention, if something
+            should change with how sound testing was performed, how long will it
+            take to get ten (identical) changes implemented in all the apps? For
+            these reasons, the SwE team at DeVilbiss recognized the need for a
+            new application that could support sound testing for every model of
+            oxygen concentrator on the line, that could "Unify" the three
+            existing sound testers.
+          </p>
+
+          <!-- Solution -->
+          <p>
+            As part of my summer internship with Drive DeVilbiss, I was to build
+            the Unified Sound Tester, an application which would consolidate the
+            three existing sound testing applications into one unified piece of
+            software. With the tool I built, testing is simple and streamlined:
+            scan the unit's serial number, enter its decibel reading, and the
+            app automatically routes the results to the right database — all in
+            one seamless flow. As of writing, it supports every existing oxygen
+            concentrator model — and it's designed for easy expansion, so the
+            software team barely has to lift a finger to accommodate new models
+            as they're released.
+          </p>
+
+          <!-- Developmet -->
+          <p>
+            I started by implementing the UI in a WinForms project, which was
+            pretty straightforward. The real challenge came with the backend: I
+            needed to design a system that could easily expand as new models
+            were added. On top of that, I had to integrate my work with the
+            company's existing codebase and database systems, which meant diving
+            into and understanding code and tables I hadn't created. Thankfully,
+            I wasn't alone — the software team supported me throughout the
+            entire development process. They guided me from sketching the UI to
+            building my project's backend to setting up an inheritance structure
+            for scalability and, finally, writing documentation and testing
+            protocols for my software.
+          </p>
+
+          <!-- Lessons -->
+          <p>
+            I could write many paragraphs about the things I learned at Drive
+            DeVilbiss. Software things, business things... But the most
+            important thing I learned in my time there was the value of a
+            high-functioning, caring team. Seriously, the SwE team at DeVilbiss
+            are a group of rock-stars. They are exceptional at what they do,
+            they are dedicated to their work, and (most importantly for nit-wit
+            interns like myself) they are exceptionally kind and generous. It is
+            so rare to work with a group of people who are all passionate about
+            what they do and get along with one another. Who are skilled enough
+            to tackle whatever problem may come their way, but are humble enough
+            to be able to admit when they are wrong. Working on that team showed
+            me what it is to be a professional. I can only hope one day I will
+            get to be part of a team half as well-oiled and kind as they were!
+          </p>
+        </details>
+        <p class="skills-section">
+          SKILLS: .NET, SQL Server, Git/GitHub, MS Access, Winforms, Software
+          Testing, Documentation.
+        </p>
+      </div>
+
+      <!-- GAPVAX SECTION -->
+      <div class="margined">
+        <h2>Manual Generator</h2>
+        <details>
+          <summary style="font-weight: bolder">
+            for GAPVAX - June 2024 to November 2024
+          </summary>
+          <p>
+            GapVax, Inc. is a world-renound manufacturer of custom industrial
+            and municipal vacuum equipment, headquartered in Johnstown,
+            Pennsylvania. Their vehicles are used for tasks like cleaning
+            industrial debris, safely digging around buried utilities, and
+            maintaining municipal sewer systems. Each unit is custom-built to
+            client specifications, with a focus on durability, ease of
+            maintenance, and efficient operation. What sets GapVax apart is its
+            commitment to quality and support. With over 130 employees and an
+            additional plant in Texas, GapVax remains a leader in the vacuum
+            truck industry by blending customization, rugged design, and
+            responsive customer support. Nothing beats a GapVax!
+          </p>
+        </details>
+
+        <img src="../imgs/gvx.jpg" alt="A GapVax truck." style="width: 25rem" />
+
+        <details>
+          <summary>
+            The Section 4 Template Generator—or "Manual Generator" as everyone
+            else calls it—is a tool I built to streamline the creation of
+            owner's manuals for GapVax trucks. I used OLE automation to control
+            an instance of Adobe Acrobat within Microsoft Excel, using Excel
+            workbooks to handle user input and Acrobat to edit and save PDFs.
+          </summary>
+
+          <!-- Context/Problem -->
+          <p>
+            GapVax designs and builds highly customized vacuum trucks, and each
+            one ships with a detailed owner's manual. In them section
+            4—Operation—covers how to use every piece of equipment on the truck,
+            but because no two trucks are exactly alike, each truck would
+            require a unique section 4 that would need to be created by hand.
+          </p>
+          <p>
+            While that level of customization showcases GapVax's quality, it
+            makes manual creation slow and labor-intensive; by the time I
+            joined, production had scaled dramatically, and the old approach to
+            Section 4 had become a serious bottleneck.
+          </p>
+
+          <!-- Solution -->
+          <p>
+            When using the tool I developed, the user is presented with a list
+            of available options for a specific truck model. They can then
+            select the desired features, and the program generates a customized
+            'template' of documentation based on those selections. While some
+            adjustments may still be necessary before the final document is
+            ready to ship with the truck, the tool significantly reduces the
+            hand-effort by automatically assembling the relevant content
+            starting points for the chosen options—essentially handling the
+            tedious "gluing together" of documentation for optional features.
+            This is where the bloated name "Section 4 Template Generator" comes
+            from.
+          </p>
+
+          <!-- Development -->
+          <p>
+            If you're familiar with software you may be thinking that using
+            Excel as a "pseudo-platform" is a strange, backwards idea. I did
+            too. When presented with the manual creation problem I originally
+            recommended building a Python app. However leadership ultimately
+            decided everything would be done in Excel. While definitely not
+            typical, it actually fit their needs very cleverly: they needed a
+            solution requiring almost no maintenance after I left, one that was
+            easy to distribute without installers, and something staff already
+            knew how to use. Excel fit all three—simple to share,
+            backwards-compatible, and familiar to non-technical users.
+          </p>
+          <p>
+            I separated the app into a front end and back end: The front end was
+            just a UI workbook with all the buttons and configuration for the
+            listed options and contained no code, while the back end (another
+            workbook) contained all the code, userforms, additional
+            configuration, and ran invisibly in the background. This setup let
+            users move, delete, share, or duplicate a front end workbook without
+            breaking functionality, as it connected seamlessly to the back end
+            over the company's file system. I built the app to be expanded upon
+            without having to write code or edit configuration files.
+            Configuration is done within the actual workbook in a hidden sheet.
+            From there, users can add new options directly in the workbook by
+            inserting rows and editing columns. I even added a wizard for
+            configuring the configuration sheet!
+          </p>
+
+          <!-- Lessons -->
+          <p>
+            The biggest challenge in this project was working within the
+            constraints of Excel's scripting language, VBA. While it technically
+            supports classes, it lacks core object-oriented features like
+            inheritance and polymorphism, as well as modern conveniences such as
+            exception handling (yes, I had to use On Error GoTo). Despite these
+            limitations, I still managed to implement using the MVP pattern. It
+            was also my first time developing a project for industry, so
+            sticking to software engineering principles required extensive
+            research. In the end, I gained a deep appreciation for why OOP
+            paradigms exist, along with valuable experience in gathering
+            requirements and creating UIs for non-technical users.
+          </p>
+        </details>
+        <p class="skills-section">
+          SKILLS: VBScript, Microsoft Excel Scripting, UI Design, Requirement
+          Gathering.
+        </p>
+      </div>
+
+      <br />
+      <hr />
+      <p style="font-family: 'Courier New', Courier, monospace">
+        &copy; jacob shultz <span id="year"></span>
+      </p>
+    </div>
+  </body>
+</html>

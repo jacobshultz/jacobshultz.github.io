@@ -1,0 +1,38 @@
+@keyframes roll-a {
+    0% { transform: translateY(0); }
+    50% {transform: translateY(50vh); }
+  100% { transform: translateY(-100vh); }
+}
+
+@keyframes roll-b {
+    0% { transform: translateY(50vh); }
+    99% { transform: translateY(-50vh); }
+  100% { transform: translateY(-100vh); }
+}
+
+@keyframes roll-c {
+    0% { transform: translateY(100vh); }
+    70% {transform: translateY(50vh); }
+  100% { transform: translateY(20vh); }
+}
+
+@keyframes roll-d {
+    0% { transform: translateY(-75vh); }
+    25% { transform: translateY(100vh); }
+    50% {transform: translateY(-50vh); }
+    75% {transform: translateY(25vh); }
+  100% { transform: translateY(-10vh); }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.75; }
+  52% { opacity: 0.95; }
+  53% { opacity: 0.55; }
+  55% { opacity: 0.60; }
+}
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}

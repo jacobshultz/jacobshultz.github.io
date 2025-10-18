@@ -1,0 +1,128 @@
+:root {
+  --crt-color: rgb(80, 255, 150);
+  --crt-glow: 0 0 2px, 0 0 2px;
+  --crt-color-dim: rgb(60, 180, 100);
+  --crt-color-very-dim: rgb(44, 94, 44);
+  --crt-backcolor: rgb(42, 63, 40);
+}
+
+::selection {
+  background: var(--crt-color);
+  color: var(--crt-color-very-dim);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+:focus-visible {
+  outline-color: none;
+  border-color: var(--crt-color);
+  box-shadow: 0 0 0 2px var(--crt-color);
+}
+
+select {
+  border: 1px solid --crt-color;
+}
+
+body {
+  position: relative;
+  z-index: 3;
+  background: var(--crt-backcolor);
+  font-family: monospace;
+  font-size: 1.2rem;
+  padding: 2rem;
+  color: var(--crt-color);
+  text-shadow: var(--crt-glow);
+  margin: 0;
+  overflow-x: hidden;
+  caret-color: transparent;
+  cursor: default;
+}
+
+summary {
+  cursor: pointer;
+}
+
+hr {
+  border-color: var(--crt-color);
+  border-style: dashed;
+}
+
+.margined {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 0.625rem;
+}
+
+h2 {
+  margin-bottom: 0rem;
+  line-height: normal;
+}
+
+h4 {
+  margin-top: 0rem;
+  line-height: normal;
+}
+
+.links {
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  gap: 3.5rem;
+  margin-top: 2rem;
+}
+
+.skills-section {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+
+  font-family: "Courier New", Courier, monospace;
+}
+
+a:link {
+  color: var(--crt-color);
+}
+
+a:visited {
+  color: var(--crt-color);
+}
+
+a:hover {
+  color: var(--crt-color-dim);
+}
+
+a:active {
+  color: var(--crt-color-very-dim);
+}
+
+img {
+  filter: grayscale(100%) contrast(70%) brightness(120%) sepia(100%)
+    hue-rotate(80deg) saturate(200%);
+}
+
+.crt-screen-scanlines {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(12, 33, 10, 0) 0px,
+    rgba(12, 33, 10, 0.2) 2px,
+    rgba(12, 33, 10, 0.2) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+#boot-text {
+  white-space: pre;
+}
