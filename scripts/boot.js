@@ -96,7 +96,7 @@ function Boot() {
     { text: "Floppy Disk \t", delay: 0 },
     { text: "Not Ready\n", delay: 3000 },
 
-    { text: "\n\nJDS BIOS v1.0\n", delay: 0 },
+    { text: "\n\nJWS BIOS v1.3\n", delay: 0 },
     { text: `Copyright (C) Jacob Shultz 2005-${currentYear}\n`, delay: 100 },
     { text: "\nBooting Operating System...\n", delay: 1500 },
   ];
