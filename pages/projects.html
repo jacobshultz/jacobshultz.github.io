@@ -77,25 +77,24 @@
             just three oxygen concentrator models. As production expanded and
             new models came out, it didn't make sense to support the original
             sound tester application written in ancient VB6, so fancy new .NET
-            apps were made to accommodate each of the new models. This left the
-            software team with several programs that all do almost exactly the
-            same thing.
+            apps were made to accommodate each of the new models.
           </p>
           <p>
-            This solution, while working temporarily, was not without it's
+            This solution, while working temporarily, was not without its
             issues. To begin, assemblers on the factory floor were confused with
             multiple apps. To them, a sound test is just a sound test. Why do
             they need to open a new program depending on the unit? Additionally,
             the SwEs at DeVilbiss knew that as production expanded this
-            multi-app approach would become unmaintainable. If ten new models
-            are added to production, will ten new apps be created? The
-            assemblers definitely won't like that! Not to mention, if something
-            should change with how sound testing was performed, how long will it
-            take to get ten (identical) changes implemented in all the apps? For
-            these reasons, the SwE team at DeVilbiss recognized the need for a
-            new application that could support sound testing for every model of
-            oxygen concentrator on the line, that could "Unify" the three
-            existing sound testers.
+            multi-app approach would become unmaintainable. The software team
+            had built several programs that all do almost exactly the same
+            thing. If ten new concentrator models are added to production, will
+            ten new apps be created? The assemblers definitely won't like that!
+            Not to mention, if something should change with how sound testing
+            was performed, how long will it take to get ten (identical) changes
+            implemented across all the apps? For these reasons, the SwE team at
+            DeVilbiss recognized the need for a new application that could
+            support sound testing for every model of oxygen concentrator on the
+            line, that could "Unify" the three existing sound testers.
           </p>
 
           <!-- Solution -->
@@ -105,9 +104,9 @@
             three existing sound testing applications into one unified piece of
             software. With the tool I built, testing is simple and streamlined:
             scan the unit's serial number, enter its decibel reading, and the
-            app automatically routes the results to the right database — all in
+            app automatically routes the results to the right database all in
             one seamless flow. As of writing, it supports every existing oxygen
-            concentrator model — and it's designed for easy expansion, so the
+            concentrator model. It's designed for easy expansion, so the
             software team barely has to lift a finger to accommodate new models
             as they're released.
           </p>
@@ -119,33 +118,34 @@
             needed to design a system that could easily expand as new models
             were added. On top of that, I had to integrate my work with the
             company's existing codebase and database systems, which meant diving
-            into and understanding code and tables I hadn't created. Thankfully,
-            I wasn't alone — the software team supported me throughout the
-            entire development process. They guided me from sketching the UI to
-            building my project's backend to setting up an inheritance structure
-            for scalability and, finally, writing documentation and testing
-            protocols for my software.
+            into and understanding code and tables I hadn't created. The
+            database systems at DeVilbiss are complex. I had to have unique CRUD
+            logic for each model. By the end of the summer I had added numerous
+            contributions to the codebase to make existing modules work for my
+            project. Thankfully, I wasn't alone — the software team supported me
+            throughout the entire development process. They guided me from
+            sketching the UI on paper to building my project's backend to
+            setting up an inheritance structure for scalability and, finally,
+            writing documentation and testing protocols for my software.
           </p>
 
           <!-- Lessons -->
           <p>
-            I could write many paragraphs about the things I learned at Drive
-            DeVilbiss. Software things, business things... But the most
-            important thing I learned in my time there was the value of a
-            high-functioning, caring team. Seriously, the SwE team at DeVilbiss
-            are a group of rock-stars. They are exceptional at what they do,
-            they are dedicated to their work, and (most importantly for nit-wit
-            interns like myself) they are exceptionally kind and generous. It is
-            so rare to work with a group of people who are all passionate about
-            what they do and get along with one another. Who are skilled enough
-            to tackle whatever problem may come their way, but are humble enough
-            to be able to admit when they are wrong. Working on that team showed
-            me what it is to be a professional. I can only hope one day I will
-            get to be part of a team half as well-oiled and kind as they were!
+            The software team at DeVilbiss showed me what it is to be a
+            professional. The engineers there are exceptional at what they do,
+            they are dedicated to their work, and they are kind and generous to
+            a fault. It is so rare to work with a group of people who are all
+            passionate about what they do and get along with one another. Who
+            are skilled enough to tackle whatever problem may come their way,
+            but are humble enough to be able to admit when they are wrong.
+            Working at Drive DeVilbiss gave me a great appreciation for working
+            on an efficient team and was my first experience collaborating with
+            others to build software. It was also a great trial-by-fire of
+            working with databases and gave me some backend chops.
           </p>
         </details>
         <p class="skills-section">
-          SKILLS: .NET, SQL Server, Git/GitHub, MS Access, Winforms, Software
+          SKILLS: .NET, MS SQL Server, Git/GitHub, MS Access, Winforms, Software
           Testing, Documentation.
         </p>
       </div>
@@ -186,8 +186,8 @@
           <!-- Context/Problem -->
           <p>
             GapVax designs and builds highly customized vacuum trucks, and each
-            one ships with a detailed owner's manual. In them section
-            4—Operation—covers how to use every piece of equipment on the truck,
+            one ships with a detailed owner's manual. In them section 4
+            "Operation" covers how to use every piece of equipment on the truck,
             but because no two trucks are exactly alike, each truck would
             require a unique section 4 that would need to be created by hand.
           </p>
@@ -201,45 +201,63 @@
           <!-- Solution -->
           <p>
             When using the tool I developed, the user is presented with a list
-            of available options for a specific truck model. They can then
-            select the desired features, and the program generates a customized
-            'template' of documentation based on those selections. While some
-            adjustments may still be necessary before the final document is
-            ready to ship with the truck, the tool significantly reduces the
+            of optional equipment features for a specific truck model. They can
+            then select the desired features from the customer's order, and the
+            program generates a customized 'section 4 template' of documentation
+            based on those selections. While some adjustments may still be
+            necessary before the final document is ready to be included with
+            final manual for the truck, the tool significantly reduces the
             hand-effort by automatically assembling the relevant content
             starting points for the chosen options—essentially handling the
-            tedious "gluing together" of documentation for optional features.
-            This is where the bloated name "Section 4 Template Generator" comes
-            from.
+            tedious "gluing together" of documentation for optional equipment
+            features. This is where the bloated name "Section 4 Template
+            Generator" comes from.
           </p>
 
           <!-- Development -->
           <p>
-            If you're familiar with software you may be thinking that using
-            Excel as a "pseudo-platform" is a strange, backwards idea. I did
-            too. When presented with the manual creation problem I originally
-            recommended building a Python app. However leadership ultimately
-            decided everything would be done in Excel. While definitely not
-            typical, it actually fit their needs very cleverly: they needed a
-            solution requiring almost no maintenance after I left, one that was
-            easy to distribute without installers, and something staff already
-            knew how to use. Excel fit all three—simple to share,
+            If you're familiar with software development you may be thinking
+            that using Excel as a "pseudo-platform" is a strange, backwards
+            idea. I did too. When presented with the manual creation problem I
+            originally recommended building a Python app. However, leadership
+            ultimately decided everything would be done in Excel. While
+            definitely not typical, it actually fit their needs very cleverly:
+            they needed a solution requiring almost no maintenance after I left,
+            one that was easy to distribute without an installer, and something
+            staff already knew how to use. Excel fit all three—simple to share,
             backwards-compatible, and familiar to non-technical users.
           </p>
           <p>
-            I separated the app into a front end and back end: The front end was
-            just a UI workbook with all the buttons and configuration for the
-            listed options and contained no code, while the back end (another
-            workbook) contained all the code, userforms, additional
-            configuration, and ran invisibly in the background. This setup let
-            users move, delete, share, or duplicate a front end workbook without
-            breaking functionality, as it connected seamlessly to the back end
-            over the company's file system. I built the app to be expanded upon
-            without having to write code or edit configuration files.
-            Configuration is done within the actual workbook in a hidden sheet.
-            From there, users can add new options directly in the workbook by
-            inserting rows and editing columns. I even added a wizard for
-            configuring the configuration sheet!
+            I separated the app into multiple front ends and a singular back
+            end: Each front end was a workbook dedicated to UI, it contained all
+            the buttons and configuration for the listed options and contained
+            no code. I made 'master copy' front end workbooks for each model of
+            GapVax trucks. When a user needs to use the 'Manual Generator' for a
+            555 unit (for example), they can simply copy the master UI workbook
+            into a directory of their liking. From there, they can modify,
+            duplicate, share, delete, or move the excel file without breaking
+            the functionality of their copied workbook or any other manual
+            generator front end workbooks. This is because the back end of the
+            application (a separate, singular 'library' workbook) contained all
+            the code, userforms, additional configuration, and ran invisibly in
+            the background. Each front end workbook connects seamlessly to the
+            singular back end workbook over the company's file system. The front
+            end workbooks only have to make a singular call to the backend's
+            API, which is designed to work with any front end workbook that
+            follows the standard format I designed.
+          </p>
+          <p>
+            I also built the app to be expanded upon without having to write
+            code or edit configuration files. As I just mentioned, the backend
+            can run on any frontend that is configured correctly. This way,
+            should more models of trucks be added to production, all that needs
+            to be done is the addition of a new frontend workbook to reflect the
+            options for the new truck model (an existing frontend workbook can
+            be easily duped and configured to the specifications of the new
+            model). Most of the configuration is done within each unique
+            instance of UI workbook in a hidden sheet. From there, users can add
+            new selectable options directly in the workbook by inserting rows
+            and editing columns, or by using the wizard I included.
           </p>
 
           <!-- Lessons -->
@@ -249,17 +267,18 @@
             supports classes, it lacks core object-oriented features like
             inheritance and polymorphism, as well as modern conveniences such as
             exception handling (yes, I had to use On Error GoTo). Despite these
-            limitations, I still managed to implement using the MVP pattern. It
-            was also my first time developing a project for industry, so
-            sticking to software engineering principles required extensive
-            research. In the end, I gained a deep appreciation for why OOP
-            paradigms exist, along with valuable experience in gathering
-            requirements and creating UIs for non-technical users.
+            limitations, I still managed to implement using the MVP pattern and
+            a scalable front/back end split. This was also summer of Freshman
+            year; my first time developing a project for industry. Sticking to
+            software engineering principles required extensive research. In the
+            end, I gained a deep appreciation for why OOP paradigms exist, along
+            with valuable experience in gathering requirements, creating UIs for
+            non-technical users, and designing backend systems.
           </p>
         </details>
         <p class="skills-section">
-          SKILLS: VBScript, Microsoft Excel Scripting, UI Design, Requirement
-          Gathering.
+          SKILLS: VBScript, Microsoft Excel Scripting, UI Design, Backend
+          Design, Requirement Gathering, Creative Problem Solving.
         </p>
       </div>
 
